@@ -1,0 +1,123 @@
+\documentclass[10pt, a4paper, roman, twoside, top=0cm, bottom=0cm, headheight=0cm, footsep=0cm, footskip=0cm]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+%
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                              % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+%
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+%
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+%
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+%
+\usepackage{ragged2e}
+%
+% personal data
+\name{Denis}{Jacob Machado}
+\title{Carta de apresentação}                               % optional, remove / comment the line if not wanted
+\address{Av. Otacilio Tomanick 586}{CEP 05363-000, São Paulo--SP, Brazil}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+55~(11)~98946~3314}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{+55~(11)~3091~7615}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{denisjacobmachado@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{https://about.me/machadodj}                         % optional, remove / comment the line if not wanted
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%
+% formatação básica de cabeçalhos e rodapés
+\usepackage{fancyhdr} % Usar os estilos do pacote fancyhdr
+    \pagestyle{fancy} % Páginas estilo fancy
+    \fancypagestyle{plain}{\fancyhf{}}
+    \renewcommand{\headrulewidth}{0pt} % Sem linha no cabeçalho
+    \headheight 13pt % Altura do cabeçalho
+    \footskip 30pt
+    \renewcommand{\footrulewidth}{0pt} % Sem linha no rodapé
+    \newcommand{\helv}{
+        %\sffamily
+        \fontsize{9}{11}\selectfont} % Comando para alterar fonte de cabeçalhos e rodapés
+    % cor do texto em cabeçalhos e rodapés
+    \usepackage{xcolor}
+    \usepackage{etoolbox}
+    \makeatletter
+    \patchcmd{\@fancyhead}{\rlap}{\color{lightgray}\rlap}{}{}
+    \patchcmd{\headrule}{\hrule}{\color{lightgray}\hrule}{}{}
+    \patchcmd{\@fancyfoot}{\rlap}{\color{lightgray}\rlap}{}{}
+    \patchcmd{\footrule}{\hrule}{\color{lightgray}\hrule}{}{}
+    \makeatother
+    \fancyfoot[LE]{\nouppercase{\helv\small{\thepage}}} % Rodapé na esquerda nas paginas pares
+    \fancyhead[LE]{\nouppercase{\helv\small{Machado, DJ}}} % Cabeçalho na esquerda nas páginas pares
+    \fancyfoot[RO]{\nouppercase{\helv\small{\thepage}}} % Rodapé na direita nas páginas ímpares
+    \fancyhead[RO]{\nouppercase{\helv\small{Machado, DJ}}} % Cabeçalho na direita nas páginas ímpares
+    \nopagenumbers{} % uncomment to suppress automatic style numbering
+%
+\begin{document}\thispagestyle{empty} % Remove cabeçalho e rodapé da primeira página
+    \recipient{Carta de Apresentação}{\footnotesize{Interunidades em Bioinformática\\EDITAL DE SELEÇÃO PNPD/CAPES No 01/2018}}
+    \date{}
+    \opening{Caras (os),}
+    \closing{Sinceramente,}
+\makelettertitle
+%
+%\justifying
+%
+
+    Esta carta de apresentação acompanha os demais documentos para inscrição no EDITAL DE SELEÇÃO PNPD/CAPES No 01/2018. 
+
+\vspace{-0.5em}
+
+\section{Introdução}
+
+\vspace{-0.5em}
+
+{\setlength{\parindent}{2ex}
+Sou biólogo, mestre em zoologia e doutor em bioinformática. Tenho experiência prática em montagem e manutenção de clusters de computadores assim como na análise de  ``big data''. Sou fluente em inglês e em várias linguagens de programação.
+
+Como educador, dei aulas em cursos pré-vestibulares da UNESP e da ONG ``Educação para Todos'' (São Vicente-SP, 2004-2009). Também dei aulas particulares e de monitoria na empresa Oficina do Estudante (2010-2012). Tenho ampla experiência em aulas e palestras em diversos cursos da USP e de universidades fora do país durante meu doutorado (2013-2018). Atualmente sou professor de ciências bilíngue na Kindy Escola Americana.
+}
+
+\vspace{-0.5em}
+
+\section{Trajetória}
+
+\vspace{-0.5em}
+
+{\setlength{\parindent}{2ex}
+
+Fui financiado por mais de nove anos pela Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP). Minha tese de doutorado foi a primeira do Programa Inter-unidades de Pós-graduação em Bioinformática da USP a combinar filogenética, biologia computacional e bioinformática em um esforço de aproximar a pesquisa de base em organismos não-modelo do que há de mais avançado no campo da bioinformática e sequenciamento de DNA. Fui também o primeiro aluno do meu programa de doutorado a publicar como único autor em jornal especializado da minha área (BMC Bioinformatics, DOI:10.1186/s12859-015-0642-9) e a receber um Hennig Award (XXXII Willi Hennig Meeting, Rostock, Germany, 2013).
+
+Por um ano (2016-2017) trabalhei no Departamento de Bioinformática da Universidade da Carolina do Norte em Charlotte (Charlotte-NC, EUA). As parcerias que iniciei lá com pesquisadores e empresários de diversas áreas resultaram em diversas apresentações (Schneider \& Machado 2018, Virus Genomics and Evolution; e Schneider, Machado, Lambodhar \& Janies 2017, 5th International Quest for Orthologs), prêmios (Most Implementable Solution, 2016 Zika Innovation Hack-a-thon), e publicações (Ecology and Evolution, DOI:10.1002/ece3.3918). Recentemente, me tornei o primeiro professor a ministrar um curso de bioinformática na Universidade de Magdalena (Santa Marta, Colômbia, 2017) e no prestigiado Programa de Pós-graduação em Zoologia da USP (2018).
+}
+
+\vspace{-0.5em}
+
+\section{Conclusão}
+
+\vspace{-0.5em}
+
+{\setlength{\parindent}{2ex}
+
+Acredito que minha experiência em grupos de trabalho multidisciplinares dentro e fora do Brasil me qualificam para a posição pretendida e ajudam a garantir a viabilidade do projeto proposto.
+
+}
+%
+\vspace{2em}
+%
+\makeletterclosing
+%
+\end{document}
